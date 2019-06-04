@@ -50,8 +50,36 @@
             "path" : "pages/seller/goodsAdd/goodsAdd",
             "style" : {}
         }
+        ,{
+            "path" : "pages/mine/userInfo/userInfo",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
-		"navigationStyle": "custom"
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "鱼叉",
+		"navigationStyle": "custom",
+		"navigationBarBackgroundColor": "#ffd84d",
+		"backgroundColor": "#EFEFEF"
+	},
+	"tabBar": {
+		"color": "#888888",
+		"selectedColor": "#ffd84d",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				 "iconPath": "static/index-0.png",
+				"selectedIconPath": "static/index-0.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/center-0.png",
+				"selectedIconPath": "static/center-0.png",
+				"text": "我的"
+			}
+			
+		]
 	}
 }

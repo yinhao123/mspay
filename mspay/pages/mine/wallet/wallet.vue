@@ -5,13 +5,36 @@
 			<block slot="content">我的钱包</block>
 		</cu-custom>
 		
+		<view class="margin-top-xl padding-xs flex align-center">
+			
+			<view class="flex-sub text-center">
+				<view class=" text-sl padding">
+					<text class=" cuIcon-moneybag text-blue"></text>
+				</view>
+				<view class=" text-xxl padding">
+					<text class="text-price text-red">80.00</text>
+				</view>
+				<view class=" text-sm padding">
+					<text class="text-grey">待到账￥50.00</text>
+				</view>
+				
+			</view>
+		</view>
+		
 		<view>
-			<view class="cuIcon-moneybag"></view>
-			<view>我的零钱</view>
-			<view>￥0.0</view>
-			<view>
-				<button>提现</button>
-				<view>查看账单详情</view>
+			
+			<view class="padding flex flex-direction">
+				<button class="cu-btn bg-blue lg">提现</button>
+			</view>
+		</view>
+		
+		<view class=" padding-xs flex align-center">
+			
+			<view class="flex-sub text-center">
+				<view class=" text-sm padding">
+					<text class="text-grey">查看交易详情</text>
+				</view>
+				
 			</view>
 		</view>
 		

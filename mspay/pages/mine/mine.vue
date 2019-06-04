@@ -6,9 +6,31 @@
 		</cu-custom>
 		<view class="list cu-bar bg-white solid-bottom margin-top">
 			<view class="action">
-				<text class="cuIcon-title text-orange "></text> 我是买家
+				<text class="cuIcon-title text-red "></text> 通用信息
+			</view>
+		</view>
+		
+		<view class="cu-list menu">
+			<view class="cu-item arrow">
+				<view class="content" @tap="goUserInfo">
+					<text class="cuIcon-circlefill text-grey"></text>
+					<text class="text-grey">个人资料</text>
+				</view>
 			</view>
 			
+			<view class="cu-item arrow">
+				<view class="content" @tap="goComplaintList">
+					<text class="cuIcon-circlefill text-grey"></text>
+					<text class="text-grey">系统设置</text>
+				</view>
+			</view>
+		</view>
+		
+		
+		<view class=" cu-bar bg-white solid-bottom margin-top">
+			<view class="action">
+				<text class="cuIcon-title text-orange "></text> 我是买家
+			</view>
 		</view>
 		<view class="cu-list menu">
 			<view class="cu-item arrow">
@@ -41,7 +63,13 @@
 			<view class="cu-item arrow">
 				<view class="content" @tap="goSaleList">
 					<text class="cuIcon-circlefill text-grey"></text>
-					<text class="text-grey">商品管理</text>
+					<text class="text-grey">商品列表</text>
+				</view>
+			</view>
+			<view class="cu-item arrow">
+				<view class="content" @tap="goGoodsAdd">
+					<text class="cuIcon-circlefill text-grey"></text>
+					<text class="text-grey">添加商品</text>
 				</view>
 			</view>
 			<view class="cu-item arrow">
@@ -68,6 +96,17 @@
 			}
 		},
 		methods: {
+			goGoodsAdd:function(){
+				uni.navigateTo({
+					url: "../seller/goodsAdd/goodsAdd"
+				})
+			},
+			goUserInfo:function(){
+				// 跳转到我的信息
+				uni.navigateTo({
+					url: "userInfo/userInfo"
+				})
+			},
 			goWallet: function() {
 				// 跳转到我的钱包
 				uni.navigateTo({

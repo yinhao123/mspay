@@ -50,6 +50,15 @@
 			</view>
 		</view>
 		</view>
+			<view class="padding-xs flex align-center">
+			
+			<view class="flex-sub text-center">
+				<view class=" text-xs padding">
+					<text class="text-gray">Tips:右滑可对商品进行编辑和删除操作</text>
+				</view>
+				
+			</view>
+		</view>
 	</view>
 </template>
 
