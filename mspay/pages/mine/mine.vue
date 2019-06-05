@@ -4,87 +4,75 @@
 			<block slot="backText">返回</block>
 			<block slot="content">个人中心</block>
 		</cu-custom>
-		<view class="list cu-bar bg-white solid-bottom margin-top">
+		<view class="cu-list avatar-list margin-top-xl menu-avatar">
+		<view class="cu-item ">
+			<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
+			<view class="content">
+				<view class="text-pink"><view class="text-cut">用户名称</view></view>
+				<view class="text-gray text-sm flex"> <view class="text-cut">用户介绍</view></view>
+			</view>
+		</view>
+		</view>
+		<!-- <view class=" cu-bar bg-white solid-bottom margin-top">
 			<view class="action">
 				<text class="cuIcon-title text-red "></text> 通用信息
 			</view>
-		</view>
+		</view> -->
 		
 		<view class="cu-list menu">
 			<view class="cu-item arrow">
 				<view class="content" @tap="goUserInfo">
-					<text class="cuIcon-circlefill text-grey"></text>
+					<text class="cuIcon-profile text-grey"></text>
 					<text class="text-grey">个人资料</text>
 				</view>
 			</view>
 			
 			<view class="cu-item arrow">
 				<view class="content" @tap="goComplaintList">
-					<text class="cuIcon-circlefill text-grey"></text>
+					<text class="cuIcon-settings text-grey"></text>
 					<text class="text-grey">系统设置</text>
 				</view>
 			</view>
 		</view>
-		
-		
-		<view class=" cu-bar bg-white solid-bottom margin-top">
-			<view class="action">
-				<text class="cuIcon-title text-orange "></text> 我是买家
-			</view>
-		</view>
+
 		<view class="cu-list menu">
 			<view class="cu-item arrow">
 				<view class="content" @tap="goSaleList">
-					<text class="cuIcon-circlefill text-grey"></text>
+					<text class="cuIcon-cart text-grey"></text>
 					<text class="text-grey">已购商品</text>
 				</view>
 			</view>
 			
 			<view class="cu-item arrow">
 				<view class="content" @tap="goComplaintList">
-					<text class="cuIcon-circlefill text-grey"></text>
+					<text class="cuIcon-favor text-grey"></text>
 					<text class="text-grey">我的售后</text>
 				</view>
 			</view>
-		</view>
-		<view class="cu-bar bg-white solid-bottom margin-top">
-			<view class="action">
-				<text class="cuIcon-title text-blue "></text> 我是卖家
-			</view>		
-		</view>
-		<view class="cu-list menu">
 			<view class="cu-item arrow">
-				<view class="content" @tap="goWallet">
-					<text class="cuIcon-circlefill text-grey"></text>
-					<text class="text-grey">我的钱包</text>
+				<view class="content" @tap="gosellerCenter">
+					<text class="cuIcon-selection text-grey"></text>
+					<text class="text-grey">卖家中心</text>
 				</view>
 			</view>
+			<view class="cu-item arrow">
+				<view class="content" @tap="goComplaintList">
+					<text class="cuIcon-service text-grey"></text>
+					<text class="text-grey">在线服务</text>
+				</view>
+			</view>
+		</view>
 		
-			<view class="cu-item arrow">
-				<view class="content" @tap="goSaleList">
-					<text class="cuIcon-circlefill text-grey"></text>
-					<text class="text-grey">商品列表</text>
+		<view class="padding-xs flex align-center">
+			
+			<view class="flex-sub text-center">
+				<view class="solid-bottom text-xs yuezhifu-footer padding">
+					<text class="text-gray">悦知付©2016-2019 </text>
 				</view>
-			</view>
-			<view class="cu-item arrow">
-				<view class="content" @tap="goGoodsAdd">
-					<text class="cuIcon-circlefill text-grey"></text>
-					<text class="text-grey">添加商品</text>
-				</view>
-			</view>
-			<view class="cu-item arrow">
-				<view class="content" @tap="goSaleList">
-					<text class="cuIcon-circlefill text-grey"></text>
-					<text class="text-grey">订单管理</text>
-				</view>
-			</view>
-			<view class="cu-item arrow">
-				<view class="content" @tap="goSaleList">
-					<text class="cuIcon-circlefill text-grey"></text>
-					<text class="text-grey">投诉管理</text>
-				</view>
+				
 			</view>
 		</view>
+		
 	</view>
 </template>
 
@@ -96,6 +84,16 @@
 			}
 		},
 		methods: {
+			gosellerCenter:function(){
+				uni.navigateTo({
+					url: "sellerCenter/sellerCenter"
+				})
+			},
+			goSellerguide:function(){
+				uni.navigateTo({
+					url: "../context/context"
+				})
+			},
 			goGoodsAdd:function(){
 				uni.navigateTo({
 					url: "../seller/goodsAdd/goodsAdd"
@@ -129,10 +127,16 @@
 </script>
 
 <style>
+		
+	.yuezhifu-footer {
+		margin-top:200upx;
+	}
 	.list {
 		margin-top: 80upx;
 	}
-
+	.avatar-list {
+		margin-top:80upx;
+	}
 	.title {
 		line-height: 2;
 	}

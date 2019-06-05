@@ -54,6 +54,22 @@
             "path" : "pages/mine/userInfo/userInfo",
             "style" : {}
         }
+        ,{
+            "path" : "pages/help/help",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/sellerguide/sellerguide",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/mine/sellerCenter/sellerCenter",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/mine/aboutUs/aboutUs",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
@@ -64,19 +80,19 @@
 	},
 	"tabBar": {
 		"color": "#888888",
-		"selectedColor": "#ffd84d",
+		"selectedColor": "#1890FF",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"list": [{
 				"pagePath": "pages/index/index",
-				 "iconPath": "static/index-0.png",
-				"selectedIconPath": "static/index-0.png",
+				 "iconPath": "static/home0.png",
+				"selectedIconPath": "static/home.png",
 				"text": "首页"
 			},
 			{
 				"pagePath": "pages/mine/mine",
-				"iconPath": "static/center-0.png",
-				"selectedIconPath": "static/center-0.png",
+				"iconPath": "static/mine0.png",
+				"selectedIconPath": "static/mine.png",
 				"text": "我的"
 			}
 			

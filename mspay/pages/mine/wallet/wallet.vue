@@ -5,11 +5,11 @@
 			<block slot="content">我的钱包</block>
 		</cu-custom>
 		
-		<view class="margin-top-xl padding-xs flex align-center">
+		<view class="margin-top-xl padding-xs wallet-local flex align-center">
 			
 			<view class="flex-sub text-center">
 				<view class=" text-sl padding">
-					<text class=" cuIcon-moneybag text-blue"></text>
+					<text class=" cuIcon-moneybag text-yellow"></text>
 				</view>
 				<view class=" text-xxl padding">
 					<text class="text-price text-red">80.00</text>
@@ -55,6 +55,9 @@
 </script>
 
 <style>
+	.wallet-local{
+		margin-top: 250upx;
+	}
 		.cu-list {
 			margin-top: 80upx;
 		}
