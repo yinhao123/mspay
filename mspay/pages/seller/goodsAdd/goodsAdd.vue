@@ -1,17 +1,18 @@
 <template>
 	<view>
 		<!-- 商品添加 -->
-		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
+		<cu-custom class="title" bgColor=" bg-gradual-pink" :isBack="true">
 			<block slot="backText">返回</block>
 			<block slot="content">发布商品</block>
 		</cu-custom>
+		<uni-notice-bar class="notice"  text="推荐使用电脑访问www.yuezhipay.com,添加商品获得更好体验." />
 		<form>
 			<view class="cu-form-group margin-top">
 				<view class="title">商品名称</view>
 				<input placeholder="请填写要出售的商品名称" name="input"></input>
 			</view>
 			<view class="cu-form-group">
-				<view class="title">商品单价</view>
+				<view class="title">商品价格</view>
 				<input placeholder="请填写商品单价" type="number" name="input"></input>
 			</view>
 			<!-- <view class="cu-form-group">
@@ -19,7 +20,7 @@
 				<input placeholder="方便买家联系到你" name="input"></input>
 			</view> -->
 			<view class="cu-form-group">
-				<view class="title">手机号码</view>
+				<view class="title">客服电话</view>
 				<input placeholder="请填写正确手机号" name="input"></input>
 				<view class="cu-capsule radius">
 					<view class='cu-tag bg-blue '>
@@ -33,7 +34,7 @@
 			
 			
 			
-			<view class="cu-bar bg-white margin-top">
+			<!-- <view class="cu-bar bg-white margin-top">
 				<view class="action">
 					图片上传
 				</view>
@@ -53,7 +54,7 @@
 						<text class='cuIcon-cameraadd'></text>
 					</view>
 				</view>
-			</view>
+			</view> -->
 			
 			<view class="cu-form-group align-start">
 				<view class="title">公开内容</view>
@@ -78,7 +79,11 @@
 </template>
 
 <script>
+	import uniNoticeBar from '@/components/uni-notice-bar/uni-notice-bar.vue'
 	export default {
+		components: {
+			uniNoticeBar
+		},
 		data() {
 			return {
 				index: -1,
@@ -306,5 +311,12 @@
 <style>
 .cu-form-group .title {
 		min-width: calc(4em + 15px);
+	}
+	.notice{
+		margin-top: 80upx;
+	}
+		
+	.title {
+		line-height: 2;
 	}
 </style>

@@ -87,7 +87,7 @@
 			
 			goSaleList: function() {
 				uni.navigateTo({
-					url: "../list/list"
+					url: "../../list/list"
 				})
 			},
 			goComplaintList:function(){
